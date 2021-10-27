@@ -5,6 +5,7 @@ use App\Http\Middleware\Authenticate;
 use Livewire\Component;
 use App\Http\Livewire\LiveWatch;
 use App\Http\Livewire\MediaUploadComponent;
+use App\Http\Livewire\VideoManager;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +31,5 @@ Route::middleware([Authenticate::class])->group(function(){
     Route::get('/live-trending-watch', LiveWatch::class);
     Route::get('/live-watch', LiveWatch::class); 
     Route::get('/super-admin', MediaUploadComponent::class); 
- 
+    Route::get('/video-manager', VideoManager::class)->name('video.manager'); 
  });
