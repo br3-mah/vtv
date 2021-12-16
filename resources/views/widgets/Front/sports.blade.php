@@ -2,12 +2,18 @@
  <section class="">
     <section class="hero">
     <div class="hero-body">
-        <p class="title has-text-white">
-        Sports
-        </p>
-        <p class="subtitle">
-        Live Sports Actions and Commentary 
-        </p>
+        <span>
+            <p class="title has-text-white">
+                Sports
+                </p>
+                <p class="subtitle">
+                Live Sports Actions and Commentary 
+            </p>
+        </span>
+        <a href="{{route('sport.all')}}" class="button is-small is-pulled-right">More</a>
+        &nbsp;&nbsp;
+        <a href="{{route('sport.all')}}" class="button is-warning is-small is-pulled-right">Live Watch</a>
+        
     </div>
     </section>
     <div class="">

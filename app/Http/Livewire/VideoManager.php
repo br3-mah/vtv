@@ -20,9 +20,9 @@ class VideoManager extends Component
     {
         $data = MovieAPI::getAllSoccer();
         
-        foreach ($data as $key => $value) {
-            dd($value);
-        }
+        // foreach ($data as $key => $value) {
+        //     dd($value);
+        // }
         return view('livewire.video-manager', ['data' => $data]);
     }
 }

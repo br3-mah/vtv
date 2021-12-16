@@ -8,6 +8,7 @@
         <p class="subtitle">
         Live Local and internations news
         </p>
+        <a href="{{route('sport.all')}}" class="button is-small is-pulled-right">More</a>
     </div>
     </section>
     <div class="">

@@ -8,6 +8,7 @@
         <p class="subtitle">
         Latest Movies and TV Shows
         </p>
+        <a href="{{route('sport.all')}}" class="button is-small is-pulled-right">More</a>
     </div>
     </section>
     <div class="">

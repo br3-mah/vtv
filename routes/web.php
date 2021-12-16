@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Http\Livewire\LiveWatch;
 use App\Http\Livewire\MediaUploadComponent;
 use App\Http\Livewire\VideoManager;
+use App\Http\Livewire\Sports;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,6 @@ Route::middleware([Authenticate::class])->group(function(){
     Route::get('/super-admin', MediaUploadComponent::class); 
     Route::get('/video-manager', VideoManager::class)->name('video.manager'); 
  });
+
+//  Free Routes
+Route::get('/all-sports', Sports::class)->name('sport.all'); 

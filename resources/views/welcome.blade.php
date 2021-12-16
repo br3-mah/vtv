@@ -65,7 +65,7 @@
                         <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
                             Teen TV
                         </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                        <a class="navbar-item" href="{{ route('sport.all') }}">
                             Sports
                         </a>
                         <a class="navbar-item" href="https://bulma.io/documentation/form/general/">

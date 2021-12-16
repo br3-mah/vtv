@@ -3,11 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Custom\SportAPI;
 
 class Sports extends Component
 {
     public function render()
     {
-        return view('livewire.sports');
+        $data = SportAPI::getAllSoccer();
+        return view('livewire.sports', ['data' => $data]);
     }
 }
