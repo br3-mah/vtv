@@ -7,6 +7,8 @@ use App\Http\Livewire\LiveWatch;
 use App\Http\Livewire\MediaUploadComponent;
 use App\Http\Livewire\VideoManager;
 use App\Http\Livewire\Sports;
+use App\Http\Livewire\TvSeriesComponent;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +39,4 @@ Route::middleware([Authenticate::class])->group(function(){
 
 //  Free Routes
 Route::get('/all-sports', Sports::class)->name('sport.all'); 
+Route::get('/tv-series', TvSeriesComponent::class)->name('tv.series.all'); 
