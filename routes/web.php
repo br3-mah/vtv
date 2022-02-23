@@ -8,6 +8,8 @@ use App\Http\Livewire\MediaUploadComponent;
 use App\Http\Livewire\VideoManager;
 use App\Http\Livewire\Sports;
 use App\Http\Livewire\TvSeriesComponent;
+use App\Http\Livewire\MusicComponent;
+use App\Http\Livewire\SearchEngineComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +37,12 @@ Route::middleware([Authenticate::class])->group(function(){
     Route::get('/live-watch', LiveWatch::class); 
     Route::get('/super-admin', MediaUploadComponent::class); 
     Route::get('/video-manager', VideoManager::class)->name('video.manager'); 
+
+    Route::get('/all-sports', Sports::class)->name('sport.all'); 
+    Route::get('/tv-series', TvSeriesComponent::class)->name('tv.series.all'); 
+    Route::get('/music', MusicComponent::class)->name('music.all'); 
+    Route::get('/magnetic-search', SearchEngineComponent::class)->name('search.search'); 
  });
 
 //  Free Routes
-Route::get('/all-sports', Sports::class)->name('sport.all'); 
-Route::get('/tv-series', TvSeriesComponent::class)->name('tv.series.all'); 
+

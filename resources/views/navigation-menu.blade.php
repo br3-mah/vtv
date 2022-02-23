@@ -13,24 +13,27 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex has-text-white">
                     <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Verge TV') }}
+                        {{ __('Magnet') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('tv.series.all') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('TV Series') }}
+                    <x-jet-nav-link class=" has-text-white" href="{{ route('tv.series.all') }}" :active="request()->routeIs('tv.series.all')">
+                        {{ __('TV Watch') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Movies') }}
+                    <x-jet-nav-link class=" has-text-white" href="{{ route('music.all') }}" :active="request()->routeIs('music.all')">
+                        {{ __('Music') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('sport.all') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class=" has-text-white" href="{{ route('sport.all') }}" :active="request()->routeIs('sport.all')">
                         {{ __('Sports') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('News') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Teens & Toons') }}
-                    </x-jet-nav-link>
                 </div>
+            </div>
+
+            <div>
+                <form>
+                    <input class="mt-2" type="search" placeholder="Search">
+                </form>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
