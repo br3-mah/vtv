@@ -34,7 +34,7 @@ Route::middleware([Authenticate::class])->group(function(){
  
     // Frontend guest routes
     Route::get('/live-trending-watch', LiveWatch::class);
-    Route::get('/live-watch', LiveWatch::class); 
+    Route::get('/live-watch', LiveWatch::class)->name('video.stream'); 
     Route::get('/super-admin', MediaUploadComponent::class); 
     Route::get('/video-manager', VideoManager::class)->name('video.manager'); 
 

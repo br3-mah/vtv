@@ -177,6 +177,79 @@ input[type=search]:focus {
 #demo-3 input:-moz-placeholder {
 	color: transparent;
 }
+
+
+/* vonage */
+#videos {
+        margin-top: 30%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #subscriber {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    #publisher {
+        position: absolute;
+        width: 360px;
+        height: 240px;
+        bottom: 10px;
+        left: 10px;
+        z-index: 100;
+        border: 3px solid white;
+        border-radius: 3px;
+    }
+
+    /* Sticky Bottom Bars */
+    .sticky {
+        background: #533401;
+        color: #fff;
+        position: sticky;
+        bottom: 0px;
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    #footer {
+        background: #333;
+        color: #fff;
+        padding: 1em;
+    }
+
+/* Media Player Custom */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.playback-controls button {
+  margin-right: 1rem;
+}
+
+.playback-controls button:last-child {
+  margin-right: 0;
+}
+
+.progress {
+  height: 3px;
+  width: 0px;
+  margin: 1rem 0;
+}
+
        </style>
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -185,6 +258,7 @@ input[type=search]:focus {
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     </head>
     <body class="has-background-black">
         <x-jet-banner />
@@ -212,20 +286,25 @@ input[type=search]:focus {
         @livewireScripts
 
         <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-        <script src="//vjs.zencdn.net/4.12/video.js"></script>
-
-        <script>
-            videojs(document.getElementById('example_video_1'), {}, function() {
-                // This is functionally the same as the previous example.
-            });
-        </script>
+        <!-- <script src="//vjs.zencdn.net/4.12/video.js"></script> -->
+        <!-- <script src="https://static.opentok.com/v2/js/opentok.js"></script> -->
+        <script src="js/magnetic.js"></script>
 		<script>
-		bulmaCarousel.attach('#carousel-demo', {
-			slidesToScroll: 1,
-			slidesToShow: 4
-		});
+            var player = new Clappr.Player({
+                source: "https://rv2aa63oow.poiuytrewqasdfghjkl.cyou/res/614774a84bca32182e1b81d831542d9a/32b586e10f7dd06bfac803aaf1178092/Gasoline_Alley_(2022)_WEB-DL_high_(fzmovies.net)_bf8944d70caa3d833c67b42b5f3f685f.mp4", 
+                parentId: "#player",
+                height: 660,
+                width: 1200,
+            });
+
+            bulmaCarousel.attach('#carousel-demo', {
+                slidesToScroll: 1,
+                slidesToShow: 4
+            });
+
+
 		</script>
-        <script>
+        <!-- <script>
             $(document).ready(function() {
                 setTimeout(function() {
                     $('.wrapper').addClass('loaded');
@@ -238,7 +317,36 @@ input[type=search]:focus {
                     $('.wrapper').removeClass('preload');
                 });
             });
-        </script>
+        </script> -->
 
     </body>
+    <div class="sticky">
+        <div class="media-controls pb-4">
+            <!-- Progress bar -->
+            <div class="progress bg-success"></div>
+            <div class="playback-controls text-center">
+            <button id="previousButton" type="button" class="btn btn-sm rounded-circle">
+                <span aria-hidden="true"><i class="fas fa-step-backward"></i></span>
+                <span class="visually-hidden">Previous Track</span>
+            </button>
+            <button id="backwardButton" type="button" class="btn btn-sm rounded-circle">
+                <span aria-hidden="true"><i class="fas fa-backward"></i></span>
+                <span class="visually-hidden">Seek Backward</span>
+            </button>
+            <button id="playPauseButton" type="button" class="btn btn-lg rounded-circle">
+                <span aria-hidden="true"><i class="fas fa-play"></i></span>
+                <span class="visually-hidden">Play</span>
+            </button>
+            <button id="forwardButton" type="button" class="btn btn-sm rounded-circle">
+                <span aria-hidden="true"><i class="fas fa-forward"></i></span>
+                <span class="visually-hidden">Seek Forward</span>
+            </button>
+            <button id="nextButton" type="button" class="btn btn-sm rounded-circle">
+                <span aria-hidden="true"><i class="fas fa-step-forward"></i></span>
+                <span class="visually-hidden">Next Track</span>
+            </button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">Footer (or something)</div>
 </html>

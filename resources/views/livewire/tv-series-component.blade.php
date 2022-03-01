@@ -24,13 +24,15 @@
                     </div>
                     <p>{{$media->imdbrating}}</p>
                     <p>{{$media->released}}</p>
+                    
                 </div>
                 <footer class="card-footer">
 
                     @foreach($media->genre as $gen)
-                        <span>{{$gen}}</span>
+                        <span>{{$gen}}</span>&nbsp;
                     @endforeach
                 </footer>
+                <a href="{{ route('video.stream') }}">Play</a>
             </div>
         </div>
     @endforeach
