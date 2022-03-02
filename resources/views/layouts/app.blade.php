@@ -210,6 +210,11 @@ input[type=search]:focus {
     }
 
     /* Sticky Bottom Bars */
+
+    .sticky-top {
+        position: sticky;
+        top: 0px;
+    }
     .sticky {
         background: #533401;
         color: #fff;
@@ -249,6 +254,55 @@ input[type=search]:focus {
   width: 0px;
   margin: 1rem 0;
 }
+
+/* Custom CSS */
+.bg-glass{
+    /* From https://css.glass */
+    background: rgba(255, 241, 241, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 241, 241, 0.06);
+}
+.bg-glass-amber{
+    /* From https://css.glass */
+    background: rgba(255, 248, 0, 0.52);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(255, 248, 0, 0.14);
+}
+.bg-glass-dark{
+    /* From https://css.glass */
+    background: rgba(10, 10, 10, 0.79);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(10, 10, 10, 0.14);
+}
+/* .bg-glass {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  overflow: hidden;
+} */
+
+/* .bg-glass:before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
+  margin: -20px;
+} */
 
        </style>
         <!-- Styles -->
@@ -320,7 +374,7 @@ input[type=search]:focus {
         </script> -->
 
     </body>
-    <div class="sticky">
+    <div class="sticky bg-glass-dark">
         <div class="media-controls pb-4">
             <!-- Progress bar -->
             <div class="progress bg-success"></div>

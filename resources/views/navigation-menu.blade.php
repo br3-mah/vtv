@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" class="bg-dark border-b border-gray-100">
+<nav x-data="{ open: false }" >
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-glass sticky-top">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -30,11 +30,11 @@
                 </div>
             </div>
 
-            <div>
+            <!-- <div>
                 <form>
                     <input class="mt-2" type="search" placeholder="Search">
                 </form>
-            </div>
+            </div> -->
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
@@ -56,7 +56,7 @@
                             <x-slot name="content">
                                 <div class="w-60">
                                     <!-- Team Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <div class="block px-1 py-2 text-xs text-gray-400">
                                         {{ __('Manage Team') }}
                                     </div>
 
@@ -74,7 +74,7 @@
                                     <div class="border-t border-gray-100"></div>
 
                                     <!-- Team Switcher -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <div class="block px-1 py-2 text-xs text-gray-400">
                                         {{ __('Switch Teams') }}
                                     </div>
 
