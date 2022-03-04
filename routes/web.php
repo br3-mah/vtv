@@ -9,6 +9,7 @@ use App\Http\Livewire\VideoManager;
 use App\Http\Livewire\Sports;
 use App\Http\Livewire\TvSeriesComponent;
 use App\Http\Livewire\MusicComponent;
+use App\Http\Livewire\News;
 use App\Http\Livewire\SearchEngineComponent;
 
 /*
@@ -42,6 +43,7 @@ Route::middleware([Authenticate::class])->group(function(){
     Route::get('/tv-series', TvSeriesComponent::class)->name('tv.series.all'); 
     Route::get('/music', MusicComponent::class)->name('music.all'); 
     Route::get('/magnetic-search', SearchEngineComponent::class)->name('search.search'); 
+    Route::get('/news-live', News::class)->name('news.all'); 
  });
 
 //  Free Routes

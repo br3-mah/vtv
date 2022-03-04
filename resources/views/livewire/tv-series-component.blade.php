@@ -1,41 +1,26 @@
-<div>
+<div class="has-background-dark">
     <div class="container content is-large has-text-white">
         <h1 class="has-text-warning">Tv Series</h1>
         <!-- <p>I was having trouble finding an example of a Bulma based gallery that wrapped.  Here is what I came up with...</p> -->
     </div>
-  
-  <div class="mx-auto container columns is-multiline">
-      
+
+    <div class="video-gallery">
     @foreach ($data as $key => $media)
-        
-        <div class="column is-one-quarter-desktop is-half-tablet">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-3by2">
-                        @foreach($media->imageurl as $img)
-                            <img src="{{$img}}" alt="">
-                        @endforeach
-                    </figure>
-                    <div class="card-content is-overlay is-clipped">
-                        <span class="tag is-info">
-                            {{ $media->title}}
-                        </span> 
 
-                    </div>
-                    <p>{{$media->imdbrating}}</p>
-                    <p>{{$media->released}}</p>
-                    
+        <div class="gallery-item">
+            @foreach($media->imageurl as $img)
+            <img src="{{$img ?? 'https://betravingknows.com/wp-content/uploads/2017/06/video-movie-placeholder-image-grey.png'}}" alt="North Cascades National Park" />
+            @endforeach
+            <div class="gallery-item-caption">
+                <div>
+                <h2>{{ $media->title}}</h2>
+                @foreach($media->genre as $gen)
+                <p>{{$gen}}</p>
+                @endforeach
                 </div>
-                <footer class="card-footer">
-
-                    @foreach($media->genre as $gen)
-                        <span>{{$gen}}</span>&nbsp;
-                    @endforeach
-                </footer>
-                <a href="{{ route('video.stream') }}">Play</a>
+                <a class="vimeo-popup" href="https://www.youtube.com/embed/-_pT-tO9LJc"></a>
             </div>
         </div>
     @endforeach
-
-  </div>
+    </div>
 </div>

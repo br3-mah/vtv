@@ -304,6 +304,137 @@ input[type=search]:focus {
   margin: -20px;
 } */
 
+/* Video Gallery */
+.section-header {
+  text-align: center;
+  margin: 60px auto 20px auto;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.section-header-underline {
+  border: 1px solid #222;
+  width: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.video-gallery {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-gallery .gallery-item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 5px 1%;
+  min-width: 150px;
+  max-width: 390px;
+  max-height: 260px;
+  width: 38%;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-gallery .gallery-item img {
+  position: relative;
+  display: block;
+  opacity: .45;
+  width: 105%;
+  height: 300px;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-23px, 0, 0);
+  backface-visibility: hidden;
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.video-gallery .gallery-item .gallery-item-caption,
+.video-gallery .gallery-item .gallery-item-caption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-gallery .gallery-item h2 {
+  font-weight: 300;
+  overflow: hidden;
+  padding: 0.5em 0;
+}
+
+
+.video-gallery .gallery-item h2,
+.video-gallery .gallery-item p {
+  position: relative;
+  margin: 0;
+  z-index: 10;
+}
+
+.video-gallery .gallery-item p {
+  letter-spacing: 1px;
+  font-size: 68%;
+
+  padding: 1em 0;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(10%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover img {
+  opacity: .3;
+  transform: translate3d(0, 0, 0);
+
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  text-align: left;
+}
+
+.video-gallery .gallery-item h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  height: 1px;
+  background: #fff;
+  
+  transition: transform 0.3s;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover h2::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.video-gallery .gallery-item:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 50em) {
+  .video-gallery .gallery-item {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+
        </style>
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -356,7 +487,13 @@ input[type=search]:focus {
                 slidesToShow: 4
             });
 
-
+            $('.video-gallery').magnificPopup({
+                delegate: 'a', 
+                type: 'iframe',
+                gallery:{
+                    enabled:true
+                }
+            });
 		</script>
         <!-- <script>
             $(document).ready(function() {
@@ -374,9 +511,9 @@ input[type=search]:focus {
         </script> -->
 
     </body>
-    <div class="sticky bg-glass-dark">
+    <!-- <div class="sticky bg-glass-dark">
         <div class="media-controls pb-4">
-            <!-- Progress bar -->
+            Progress bar
             <div class="progress bg-success"></div>
             <div class="playback-controls text-center">
             <button id="previousButton" type="button" class="btn btn-sm rounded-circle">
@@ -402,5 +539,5 @@ input[type=search]:focus {
             </div>
         </div>
     </div>
-    <div id="footer">Footer (or something)</div>
+    <div id="footer">Footer (or something)</div> -->
 </html>
