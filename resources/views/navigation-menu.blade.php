@@ -27,6 +27,9 @@
                     <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('News') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link class=" has-text-danger" href="{{ route('video.stream') }}" :active="request()->routeIs('video.stream')">
+                        {{ __('Live') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 

@@ -476,10 +476,11 @@ input[type=search]:focus {
         <script src="js/magnetic.js"></script>
 		<script>
             var player = new Clappr.Player({
-                source: "https://rv2aa63oow.poiuytrewqasdfghjkl.cyou/res/614774a84bca32182e1b81d831542d9a/32b586e10f7dd06bfac803aaf1178092/Gasoline_Alley_(2022)_WEB-DL_high_(fzmovies.net)_bf8944d70caa3d833c67b42b5f3f685f.mp4", 
+                source: "http://185.53.88.146/live/XCFDFA23456/playlist.m3u8", 
                 parentId: "#player",
                 height: 660,
                 width: 1200,
+                autoPlay: 'true',
             });
 
             bulmaCarousel.attach('#carousel-demo', {
