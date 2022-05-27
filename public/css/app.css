@@ -58,8 +58,17 @@ img {
   font-size: 20px;
   font-family: Bungee;
   text-align: right;
-  color: limegreen;
+  color: rgb(94, 137, 41);
   margin: auto;
+  background: transparent;
+  margin-left: 1%;
+  margin-bottom: -10px;
+}
+
+.mega-logo-postfix {
+  color: rgb(78, 40, 36);
+  font-size: 10px;
+  font-family: Bungee;
 }
 /*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -1212,9 +1221,6 @@ select {
 .col-span-6 {
 	grid-column: span 6 / span 6;
 }
-.m-2 {
-	margin: 0.5rem;
-}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -1636,14 +1642,6 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
 }
-.bg-green-400 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
-}
-.bg-green-500 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
-}
 .bg-red-500 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
@@ -1899,14 +1897,6 @@ select {
 .text-green-700 {
 	--tw-text-opacity: 1;
 	color: rgba(4, 120, 87, var(--tw-text-opacity));
-}
-.text-green-800 {
-	--tw-text-opacity: 1;
-	color: rgba(6, 95, 70, var(--tw-text-opacity));
-}
-.text-blue-400 {
-	--tw-text-opacity: 1;
-	color: rgba(96, 165, 250, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;

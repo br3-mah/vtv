@@ -13,6 +13,7 @@
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('styl/app.css') }}">
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>

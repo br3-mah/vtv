@@ -21,6 +21,8 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.52.1",
         "sass-loader": "^12.6.0",
+        "stylus": "^0.57.0",
+        "stylus-loader": "^7.0.0",
         "tailwindcss": "^2.2.2"
     },
     "dependencies": {
