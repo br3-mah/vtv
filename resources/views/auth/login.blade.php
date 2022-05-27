@@ -6,7 +6,7 @@
 <div class="col-lg-4 mid-side-login">
     <!-- <span center class="mega-logo">ERMAC SCREEN</span> -->
 </div>
-<div class="login-card col-lg-4">
+<div class="login-card col-lg-4 col-xs-12">
             
         <figure class="image is-64x64">
             <img src="{{asset('/images/ermac.webp')}}">
