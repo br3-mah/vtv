@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 @import url(https://fonts.googleapis.com/css?family=Bungee);
-body {
+html, body {
   background-color: #000;
   align-items: center;
-  justify-content: center;
+  height: 80px;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   background-image: url("https://3.bp.blogspot.com/-ooWwpkI14jw/WpR-wXKgY2I/AAAAAAAArYc/5tceoYv5fNUcTvpEo5IK2POhYefrn2WQgCLcBGAs/s1600/favorite%2Bmovies%2B07-17.png");
   background-size: cover;
@@ -11,27 +11,44 @@ body {
   font-family: Bungee;
 }
 
+.left-side-login {
+  /* From https://css.glass */
+  background: rgba(107, 115, 111, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.4px);
+  -webkit-backdrop-filter: blur(1.4px);
+  width: 30%;
+}
+
+.mid-side-login {
+  /* From https://css.glass */
+  background: rgba(70, 84, 77, 0.21);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(2.9px);
+  width: 20%;
+}
+
 .login-card {
-  width: 40%;
-  height: 100%;
+  width: 60%;
   padding: 6%;
   align-items: center;
-  justify-content: center;
-  margin: auto;
+  float: right;
   /* From https://css.glass */
   background: rgba(0, 0, 0, 0.77);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.6px);
   -webkit-backdrop-filter: blur(3.6px);
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #fff;
+  font-family: Bungee;
 }
 
 img {
   align-items: center;
   justify-content: center;
   margin: auto;
+  width: 44%;
   border-radius: 100%;
 }
 

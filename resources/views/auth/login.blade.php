@@ -1,10 +1,16 @@
 <x-guest-layout>
-    <br>
-    <div class="login-card">
-            <span center class="mega-logo">ERMAC SCREEN</span>
-            <figure class="image is-64x64">
-                <img src="{{asset('/images/ermac.webp')}}">
-            </figure>
+<div class="row flex">
+<div class="col-lg-3 left-side-login">
+    <!-- <span center class="mega-logo">ERMAC SCREEN</span> -->
+</div>
+<div class="col-lg-4 mid-side-login">
+    <!-- <span center class="mega-logo">ERMAC SCREEN</span> -->
+</div>
+<div class="login-card col-lg-4">
+            
+        <figure class="image is-64x64">
+            <img src="{{asset('/images/ermac.webp')}}">
+        </figure>
         <x-slot name="logo">
         </x-slot>
 
@@ -55,4 +61,5 @@
             </a>
         @endif
     </div>
+</div>
 </x-guest-layout>
