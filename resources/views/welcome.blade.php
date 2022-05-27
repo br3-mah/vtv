@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Magnet</title>
+        <title>Ermac</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -107,68 +107,11 @@
             <!-- Start NavBar -->
             <nav class="navbar is-black">
                 <div class="navbar-brand">
-                        <svg class="w-10 h-10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <path style="fill:#507C5C;" d="M424.177,456.169h-69.293c-18.706,0-33.924-15.218-33.924-33.924v-218.94
-                        c0-35.941-28.687-65.62-63.949-66.158c-17.498-0.302-34.054,6.372-46.566,18.693c-12.514,12.327-19.408,28.756-19.408,46.261v67.368
-                        c0,7.971-6.463,14.436-14.436,14.436c-7.973,0-14.436-6.464-14.436-14.436v-67.368c0-25.3,9.952-49.036,28.021-66.831
-                        c18.064-17.792,41.948-27.389,67.265-26.992c50.94,0.778,92.381,43.407,92.381,95.027v218.94c0,2.786,2.266,5.053,5.053,5.053
-                        h69.293c2.786,0,5.053-2.266,5.053-5.053v-58.454c0-7.971,6.463-14.436,14.436-14.436s14.436,6.464,14.436,14.436v58.454
-                        C458.1,440.951,442.882,456.169,424.177,456.169z M157.115,456.169H87.821c-18.706,0-33.924-15.218-33.924-33.924V202.1
-                        C53.897,90.663,144.56,0,255.999,0S458.1,90.663,458.1,202.1v66.883c0,7.971-6.463,14.436-14.436,14.436
-                        s-14.436-6.464-14.436-14.436V202.1c0-95.519-77.711-173.229-173.23-173.229S82.769,106.581,82.769,202.1v220.145
-                        c0,2.786,2.266,5.053,5.053,5.053h69.293c2.786,0,5.053-2.266,5.053-5.053v-71.922c0-7.971,6.463-14.436,14.436-14.436
-                        s14.436,6.464,14.436,14.436v71.922C191.037,440.951,175.819,456.169,157.115,456.169z"/>
-                    <path style="fill:#CFF09E;" d="M443.664,337.797v84.45c0,10.763-8.725,19.488-19.488,19.488h-69.293
-                        c-10.763,0-19.487-8.725-19.487-19.488v-84.45H443.664z"/>
-                    <path style="fill:#507C5C;" d="M424.177,456.169h-69.293c-18.706,0-33.924-15.218-33.924-33.924v-84.448
-                        c0-7.971,6.463-14.436,14.436-14.436h108.269c7.973,0,14.436,6.464,14.436,14.436v84.448
-                        C458.1,440.951,442.882,456.169,424.177,456.169z M349.831,352.233v70.012c0,2.786,2.266,5.053,5.053,5.053h69.293
-                        c2.786,0,5.053-2.266,5.053-5.053v-70.012H349.831z"/>
-                    <path style="fill:#CFF09E;" d="M176.601,337.797v84.45c0,10.763-8.725,19.488-19.487,19.488H87.821
-                        c-10.763,0-19.488-8.725-19.488-19.488v-84.45H176.601z"/>
-                    <g>
-                        <path style="fill:#507C5C;" d="M157.115,456.169H87.821c-18.706,0-33.924-15.218-33.924-33.924v-84.448
-                            c0-7.971,6.463-14.436,14.436-14.436h108.269c7.973,0,14.436,6.464,14.436,14.436v84.448
-                            C191.037,440.951,175.819,456.169,157.115,456.169z M82.769,352.233v70.012c0,2.786,2.266,5.053,5.053,5.053h69.293
-                            c2.786,0,5.053-2.266,5.053-5.053v-70.012H82.769z"/>
-                        <path style="fill:#507C5C;" d="M263.943,512c-1.392,0-2.806-0.204-4.208-0.631c-7.628-2.32-11.928-10.385-9.607-18.013L263,451.059
-                            l-31.791,7.609c-5.439,1.304-11.144-0.657-14.637-5.025c-3.493-4.37-4.147-10.365-1.679-15.384l28.869-58.706
-                            c3.518-7.154,12.169-10.104,19.324-6.584c7.154,3.519,10.102,12.171,6.584,19.325l-15.316,31.148l26.432-6.327
-                            c5.031-1.2,10.324,0.378,13.871,4.146c3.547,3.768,4.806,9.147,3.299,14.097l-20.21,66.405
-                            C275.854,507.99,270.13,511.999,263.943,512z"/>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    </svg>
+                    <div class="mt-2">
+                        <figure class="image is-64x64">
+                            <img src="{{asset('/images/ermac.webp')}}">
+                        </figure>
+                    </div>
                     <div class="navbar-burger" data-target="navbarExampleTransparentExample">
                     <span></span>
                     <span></span>
@@ -178,47 +121,50 @@
 
                 <div id="navbarExampleTransparentExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" href="https://bulma.io/">
+                        <a class="navbar-item" href="/">
                             Home
                         </a>
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                            <a class="navbar-link" href="#">
                             Menu
                             </a>
                             <div class="navbar-dropdown is-boxed">
-                            <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                                Movies
-                            </a>
-                            <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-                                TV Shows
-                            </a>
-                            <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                                Teen TV
-                            </a>
-                            <a class="navbar-item" href="{{ route('sport.all') }}">
-                                Sports
-                            </a>
-                            <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                                News
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item" href="/live-watch">
-                                Live Watch
-                            </a>
-                            <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                                Live Trending
-                            </a>
+                                <a class="navbar-item" href="{{ route('tv.series.all') }}">
+                                    Movies
+                                </a>
+                                <a class="navbar-item" href="{{ route('music.all') }}">
+                                    Music
+                                </a>
+                                <a class="navbar-item" href="{{ route('tv.series.all') }}">
+                                    TV Shows
+                                </a>
+                                <a class="navbar-item" href="{{ route('sport.all') }}">
+                                    Teen TV
+                                </a>
+                                <a class="navbar-item" href="{{ route('sport.all') }}">
+                                    Sports
+                                </a>
+                                <a class="navbar-item" href="{{ route('news.all') }}">
+                                    News
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item" href="/live-watch">
+                                    Live Watch
+                                </a>
+                                <a class="navbar-item is-active" href="#">
+                                    Live Trending
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <!-- <div>
                         <a href="{{ route('search.search') }}" class="button is-small mt-2">
                             <span class="icon is-small">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
                         </a>
-                    </div>
+                    </div> -->
 
                     <div class="navbar-end">
                     <div class="navbar-item">
