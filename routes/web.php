@@ -12,6 +12,7 @@ use App\Http\Livewire\MusicComponent;
 use App\Http\Livewire\MovieComponent;
 use App\Http\Livewire\News;
 use App\Http\Livewire\SearchEngineComponent;
+use App\Http\Livewire\CustomerComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,7 @@ Route::middleware([Authenticate::class])->group(function(){
 
     // Administrator
     Route::get('/uploader', MediaUploadComponent::class)->name('upload');
+    Route::get('/customers', CustomerComponent::class)->name('customers');
  });
 
 //  Free Routes

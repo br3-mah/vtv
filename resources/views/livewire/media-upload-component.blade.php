@@ -9,7 +9,7 @@
                     </p>
                     <ul class="menu-list">
                         <li><a class="is-active">Dashboard</a></li>
-                        <li><a>Customers</a></li>
+                        <li><a href="{{ route('customers') }}">Customers</a></li>
                         <li><a href="{{route('video.manager')}}">Video Manager</a></li>
                         <li><a>Other</a></li>
                     </ul>
