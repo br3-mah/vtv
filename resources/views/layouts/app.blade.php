@@ -434,7 +434,149 @@ input[type=search]:focus {
   }
 }
 
+/* * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #0d0d0d;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+} */
+
+/* main {
+	width: 100%;
+	max-width: 680px;
+	margin: 10px auto;
+} */
+
+
+
+@media (max-width: 768px) {
+	.box {
+		grid-template-columns: repeat(auto-fit, minmax(40.333333%, 1fr));
+	}
+}
+
+.box .item {
+	height: 165px;
+	background-color: #0d0d0d;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.box .item .item-poster {
+	width: 90px;
+	min-width: 90px;
+	height: 125px;
+	object-fit: cover;
+	margin: 1em;
+	z-index: 2;
+	transition: 0.6s;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.78);
+}
+
+.box .item .item-poster img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}
+
+.item:hover .item-poster {
+	margin-bottom: 50px;
+}
+
+.item-data {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	margin-bottom: 20px;
+	z-index: 2;
+	letter-spacing: 0.011em;
+}
+
+.item-part {
+	display: flex;
+	font-size: 9px;
+	align-self: flex-end;
+	position: absolute;
+	top: 2em;
+	right: 2em;
+}
+
+.item-part .item-season {
+	margin-right: 2px;
+}
+
+.item-part .item-season,
+.item-part .item-episode {
+	background-color: #ff000021;
+	padding: 0.3em 0.5em;
+	line-height: 1;
+}
+
+.item-part .item-season,
+.item-part .item-episode,
+.item-data h1,
+.item-data p {
+	color: antiquewhite;
+}
+
+.item-data h1 {
+	font-size: 1.3em;
+	margin-bottom: 0.4em;
+}
+
+.item-data p {
+	font-size: 0.7em;
+	margin-bottom: 1em;
+}
+
+.item-rate {
+	font-size: 0.7em;
+	display: flex;
+}
+
+.item-rate .item-vote {
+	color: #ffc107;
+}
+
+.item-rate .item-time {
+	color: #a94444;
+	margin-left: 1em;
+}
+
+.item-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: 1;
+	opacity: 0.17;
+	transition: 0.5s;
+	object-position: 0 30%;
+}
+
+.item:hover .item-bg {
+	z-index: 3;
+	opacity: 1;
+}
        </style>
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -494,6 +636,17 @@ input[type=search]:focus {
                 gallery:{
                     enabled:true
                 }
+            });
+
+            var imageSwap = function () {
+              var $this = $(this);
+              var newSource = $this.data("swap");
+              $this.data("swap", $this.attr("src"));
+              $this.attr("src", newSource);
+            };
+
+            $(function () {
+              $("img.item-bg").hover(imageSwap, imageSwap);
             });
 		</script>
         <!-- <script>

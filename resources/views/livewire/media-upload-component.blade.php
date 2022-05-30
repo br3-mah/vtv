@@ -1,39 +1,4 @@
 <div>
-    <!-- START NAV -->
-    <nav class="navbar is-white">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item brand-text" href="../index.html">
-          Verge 
-        </a>
-                <div class="navbar-burger burger" data-target="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div id="navMenu" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="admin.html">
-            Home
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Orders
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Payments
-          </a>
-                    <a class="navbar-item" href="admin.html">
-            Exceptions
-          </a>
-                                 <a class="navbar-item" href="admin.html">
-            Reports
-          </a>
-                </div>
-
-            </div>
-        </div>
-    </nav>
     <!-- END NAV -->
     <div class="container">
         <div class="columns">
@@ -96,7 +61,6 @@
                             <h2 class="subtitle">
                                 I hope you are having a great day!
                             </h2>
-
                         </div>
                     </div>
                 </section>
@@ -104,26 +68,26 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">439k</p>
+                                <p class="title">{{App\Models\User::count()}}</p>
                                 <p class="subtitle">Users</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">59k</p>
-                                <p class="subtitle">Products</p>
+                                <p class="title">{{App\Models\Multimedia::count()}}</p>
+                                <p class="subtitle">Movies</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">3.4k</p>
-                                <p class="subtitle">Open Orders</p>
+                                <p class="title">0</p>
+                                <p class="subtitle">TV Series</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="title">19</p>
-                                <p class="subtitle">Exceptions</p>
+                                <p class="subtitle">Downloads</p>
                             </article>
                         </div>
                     </div>
