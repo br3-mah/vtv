@@ -1,12 +1,11 @@
 <div>
     <!-- <video id="example_video_1"  class="video-js vjs-default-skin vjs-big-play-centered section"
     controls preload="auto" height="800" width="1180">
-        <source src="http://185.53.88.146/live/XCFDFA23456/playlist.m3u8" type="application/x-mpegURL" />
+    <source src="http://d6.o2tv.org/Superman%20and%20Lois/Season%2002/Superman%20and%20Lois%20-%20S02E11%20HD%20(TvShows4Mobile.Com)%20otv-jtogh.mp4" type="video/mp4">
+        <source src="http://d6.o2tv.org/Superman%20and%20Lois/Season%2002/Superman%20and%20Lois%20-%20S02E11%20HD%20(TvShows4Mobile.Com)%20otv-jtogh.mp4" type="application/x-mpegURL" />
     </video> -->
 
-    <div id="player">
-
-    </div>
+    <div id="player"></div> 
 
     <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">

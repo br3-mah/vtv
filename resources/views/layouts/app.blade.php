@@ -618,7 +618,7 @@ img {
         <script src="js/magnetic.js"></script>
 		<script>
             var player = new Clappr.Player({
-                source: "http://185.53.88.146/live/XCFDFA23456/playlist.m3u8", 
+                source: "https://stream.mux.com/02muD7FNDnxHzA00WRe9YDvizCGrRrHEnvP1kIraDvALQ.m3u8", 
                 parentId: "#player",
                 height: 660,
                 width: 1200,
