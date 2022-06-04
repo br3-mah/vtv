@@ -14,6 +14,8 @@ use App\Http\Livewire\News;
 use App\Http\Livewire\SearchEngineComponent;
 use App\Http\Livewire\CustomerComponent;
 
+
+use App\Http\Controllers\FileUploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +53,12 @@ Route::middleware([Authenticate::class])->group(function(){
     // Administrator
     Route::get('/uploader', MediaUploadComponent::class)->name('upload');
     Route::get('/customers', CustomerComponent::class)->name('customers');
+
+
+    Route::get('file-upload', [FileUploadController::class, 'index'])->name('files.index');
+    Route::post('/upload-large-files', [FileUploadController::class, 'uploadLargeFiles'])->name('files.upload.large');
+    Route::post('/save-media-info', [FileUploadController::class, 'store'])->name('files.info');
+    
  });
 
 //  Free Routes
