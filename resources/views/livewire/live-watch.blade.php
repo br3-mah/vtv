@@ -1,19 +1,9 @@
 <div>
-  <!-- 
-  <video id="example_video_1"  class="video-js vjs-default-skin vjs-big-play-centered section"
-  controls preload="auto" height="800" width="1180">
-  <source src="http://d6.o2tv.org/Superman%20and%20Lois/Season%2002/Superman%20and%20Lois%20-%20S02E11%20HD%20(TvShows4Mobile.Com)%20otv-jtogh.mp4" type="video/mp4">
-      <source src="http://d6.o2tv.org/Superman%20and%20Lois/Season%2002/Superman%20and%20Lois%20-%20S02E11%20HD%20(TvShows4Mobile.Com)%20otv-jtogh.mp4" type="application/x-mpegURL" />
-  </video> 
-  -->
-
-  <div id="player"></div> 
-
-  <p class="intro">Based from <b><a href="https://dribbble.com/shots/2241918-Movie-Ticket-Card-Sketch-freebie" target="_blank">Soumya's Movie Ticket Card</a></b><p>
-	
-  <div class="">
+  <video id="example_video_1"  class="video-js vjs-default-skin vjs-big-play-centered section" controls preload="auto" height="800" width="1200">
+      <source src="/storage/videos/BOBBY-EAST-I-FORGIVE-YOU-FT-MACKY-2_8b7a06b18b74d670eecd08c5c4f5208f.mp4" type="video/mp4" />
+  </video>
   
-    
+  <div class="">
     <div class="movie-card">
       <div class="movie-header manOfSteel">
         <div class="header-icon-container">
