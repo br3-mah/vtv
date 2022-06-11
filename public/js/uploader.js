@@ -29,7 +29,9 @@ resumable.on('fileProgress', function (file) { // trigger when file progress upd
 resumable.on('fileSuccess', function (file, response) { // trigger when file upload complete
     alert('Uploaded Successfully.');
     response = JSON.parse(response);
-    alert(response.path);
+    // alert(response.path);
+    console.log(response.path);
+    console.log($('#caption_title').val());
 
     // Information about the Media
     // var dataURL = canvas.toDataURL('image/jpeg', 1.0)
@@ -42,15 +44,21 @@ resumable.on('fileSuccess', function (file, response) { // trigger when file upl
     formData.append('media_type', $('#media_type').val())
     formData.append('media_path', response.path)
     formData.append('background_desc', $('#background_desc').val())
-    formData.append('cover_image', $('#media_pic')[0].files)
+    formData.append('cover_image', $('#media_pic').prop('files')[0])
+    formData.append('price', $('#wtch_price').val())
 
-    // console.log(datx);
+    
+    console.log(formData);
     // save the information and the path in the database
     $.ajax({
         type: "post",
         url: "/save-media-info",
+        contentType: 'multipart/form-data',
         data: formData,
-        // headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        cache: false,
+        processData: false, 
+        contentType: false,
+        headers: {'X-CSRF-TOKEN': token},
         dataType: "json",
         success: function(response) {
             console.log(response);
