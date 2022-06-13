@@ -13,6 +13,7 @@ use App\Http\Livewire\MovieComponent;
 use App\Http\Livewire\News;
 use App\Http\Livewire\SearchEngineComponent;
 use App\Http\Livewire\CustomerComponent;
+use App\Http\Livewire\VideoPlayerComponent;
 
 
 use App\Http\Controllers\FileUploadController;
@@ -53,8 +54,9 @@ Route::middleware([Authenticate::class])->group(function(){
     // Administrator
     Route::get('/uploader', MediaUploadComponent::class)->name('upload');
     Route::get('/customers', CustomerComponent::class)->name('customers');
+    Route::get('/player/{movie}', VideoPlayerComponent::class)->name('video-player');
 
-
+    // Controllers
     Route::get('file-upload', [FileUploadController::class, 'index'])->name('files.index');
     Route::post('/upload-large-files', [FileUploadController::class, 'uploadLargeFiles'])->name('files.upload.large');
     Route::post('/save-media-info', [FileUploadController::class, 'store'])->name('files.info');
