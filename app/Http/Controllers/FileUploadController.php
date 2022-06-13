@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\Storage;
 use Pion\Laravel\ChunkUpload\Handler\HandlerFactory;
 use Pion\Laravel\ChunkUpload\Receiver\FileReceiver;
 use App\Models\Multimedia; 
+use App\Traits\StoreImageTrait; 
 
 class FileUploadController extends Controller {
-
+    use StoreImageTrait;
     /**
      * @return Application|Factory|View
      */
@@ -56,53 +57,29 @@ class FileUploadController extends Controller {
     }
 
     public function store(Request $request)
-    {        
+    { 
+
+        $request->validate([
+            'cover_image' => 'required|mimes:png,jpg,jpeg,csv,txt,pdf|max:2048',
+            'caption_title' => 'required',
+            'sub_headline' => 'required',
+            'media_type' => 'required',
+            'media_path' => 'required',
+            'background_desc' => 'required',
+            'price' => 'required'
+        ]);
+
+        $data = $request->all();
+        $data['cover_image'] = $this->verifyAndStoreImage($request, 'cover_image', 'covers');
+   
         
-        dd($request);
-        // $request->validate([
-        //     'cover_image' => 'required|mimes:png,jpg,jpeg,csv,txt,pdf|max:2048',
-        //     'caption_title' => 'required',
-        //     'sub_headline' => 'required',
-        //     'media_type' => 'required',
-        //     'media_path' => 'required',
-        //     'background_desc' => 'required',
-        //     'price' => 'required',
-        // ]);
+        // Multimedia::create($data);
+        // return response($data, 200);
 
-        // die(print_r($request, true));
-        //    if($request->file('file')) {
-  
-        //        $file = $request->file('file');
-        //        $filename = time().'_'.$file->getClientOriginalName();
-  
-        //        // File extension
-        //        $extension = $file->getClientOriginalExtension();
-  
-        //        // File upload location
-        //        $location = 'files';
-  
-        //        // Upload file
-        //        $file->move($location,$filename);
-               
-        //        // File path
-        //        $filepath = url('files/'.$filename);
-  
-        //        // Response
-        //        $data['success'] = 1;
-        //        $data['message'] = 'Uploaded Successfully!';
-        //        $data['filepath'] = $filepath;
-        //        $data['extension'] = $extension;
-        //    }else{
-        //        // Response
-        //        $data['success'] = 2;
-        //        $data['message'] = 'File not uploaded.'; 
-        //    }
-  
-        // return response()->json($data);
+        Multimedia::create($data);
+        return json_encode(array(
+            "statusCode"=>200
+        ));
 
-        // Multimedia::create($request->all());
-        // return json_encode(array(
-        //     "statusCode"=>200
-        // ));
     }
 }

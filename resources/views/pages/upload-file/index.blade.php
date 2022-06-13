@@ -32,7 +32,7 @@
                 <div class="field">
                     <label class="label">Watch Cost</label>
                     <div class="control">
-                    <input id="price" class="input" type="text" placeholder="Headline or Short title">
+                    <input id="wtch_price" class="input" type="text" placeholder="Headline or Short title">
                     </div>
                 </div>
             
@@ -65,7 +65,7 @@
 
                 <div class="file is-secondary has-name is-boxed">
                     <label class="file-label">
-                    <input id="media_pic" type="file" name="cover_image">
+                        <input id="media_pic" type="file" name="cover_image">
                     </label>
                 </div>
 

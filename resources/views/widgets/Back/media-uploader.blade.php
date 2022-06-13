@@ -1,4 +1,4 @@
-@if($isPopped)
+<!-- @if($isPopped)
 <div class="modal is-active">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -15,7 +15,7 @@
             <div class="field">
                 <label class="label">Caption Title</label>
                 <div class="control">
-                  <input wire:model="caption_title" class="input" type="text" placeholder="Movie, Series, Sports or New Title">
+                  <input class="input" id="caption_title" type="text" placeholder="Movie, Series, Sports or New Title">
                     @error('caption_title') <small class="error has-text-danger">{{ $message }}</small> @enderror
                 </div>
             </div>        
@@ -23,7 +23,7 @@
             <div class="field">
                 <label class="label">Sub Headling</label>
                 <div class="control">
-                  <input wire:model="sub_headline" class="input" type="text" placeholder="Headline or Short title">
+                  <input id="sub_headline" class="input" type="text" placeholder="Headline or Short title">
                   @error('sub_headline') <small class="error has-text-danger">{{ $message }}</small> @enderror
                 </div>
             </div>
@@ -32,14 +32,14 @@
                 <label class="label">Media Type</label>
                 <div class="control">
                   <div class="select">
-                      <select wire:model="media_type">
-                      <option>--choose--</option>
-                      <option>Movie</option>
-                      <option>TV Show</option>
-                      <option>TV Series</option>
-                      <option>Sports</option>
-                      <option>News</option>
-                      <option>Kids & Teens</option>
+                      <select id="media_type">
+                          <option>--choose--</option>
+                          <option>Movies</option>
+                          <option>TV Show</option>
+                          <option>TV Series</option>
+                          <option>Sports</option>
+                          <option>News</option>
+                          <option>Kids & Teens</option>
                       </select>
                   </div>
                   @error('media_type') <small class="error has-text-danger">{{ $message }}</small> @enderror
@@ -49,7 +49,7 @@
             <div class="field">
                 <label class="label">Background Description</label>
                 <div class="control">
-                  <textarea wire:model="background_desc" class="textarea" placeholder="Brief story background about the media"></textarea>
+                  <textarea id="background_desc" class="textarea" placeholder="Brief story background about the media"></textarea>
                   @error('background_desc') <small class="error has-text-danger">{{ $message }}</small> @enderror
                 </div>
             </div>
@@ -97,4 +97,4 @@
       </footer>
     </div>
 </div>
-@endif
+@endif -->
