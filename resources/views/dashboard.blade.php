@@ -1,4 +1,4 @@
-<x-app-layout>
+    <x-app-layout>
             @include('widgets.Front.trending')
             @include('widgets.Front.cartoons')
             @include('widgets.Front.ads-1')
