@@ -9,7 +9,7 @@ html, body {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: Bungee;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .left-side-login {
@@ -2122,6 +2122,9 @@ select {
 }
 .font-semibold {
 	font-weight: 600;
+}
+.font-bold {
+	font-weight: 700;
 }
 .uppercase {
 	text-transform: uppercase;

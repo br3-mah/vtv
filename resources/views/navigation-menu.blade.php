@@ -5,16 +5,18 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                    <a style="font-family:impact; font-weight:bolder; font-size:30px" class="text-green-500 font-bold" href="{{ route('dashboard') }}">
+                    {{ __('Ermac') }}   
+                        <!-- <img src="https://cdn.dribbble.com/users/719060/screenshots/5713089/dribbble.jpg"> -->
+                        <!-- <x-jet-application-mark class="block h-9 w-auto" /> -->
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex has-text-white">
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <!-- <x-jet-nav-link class="font-bold text-green-500" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Ermac') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> -->
                     <x-jet-nav-link class=" has-text-white" href="{{ route('tv.series.all') }}" :active="request()->routeIs('tv.series.all')">
                         {{ __('TV Series') }}
                     </x-jet-nav-link>
@@ -31,7 +33,10 @@
                         {{ __('News') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link class=" has-text-danger" href="{{ route('video.stream') }}" :active="request()->routeIs('video.stream')">
-                        {{ __('Live') }}
+                    <span class="icon">
+                    <i class="fas fa-video"></i>                    
+                    </span>
+                    {{ __('Live TV') }}
                     </x-jet-nav-link>
                 </div>
             </div>
