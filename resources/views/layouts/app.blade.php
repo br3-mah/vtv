@@ -262,7 +262,7 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(2.5px);
       -webkit-backdrop-filter: blur(2.5px);
-      border: 1px solid rgba(255, 241, 241, 0.06);
+      /* border: 1px solid rgba(255, 241, 241, 0.06); */
   }
   .bg-glass-amber{
       /* From https://css.glass */
