@@ -1,5 +1,5 @@
 
-<div class="contianer-fluid mx-9">
+<div class="contianer-fluid mx-9" style="z-index:1;">
 	<div class="boxx">
 
 		<div class="item">
@@ -15,7 +15,7 @@
 				<p>Adventure, Drama</p>
 				<div class="item-rate">
 					<div class="item-vote">8.2</div>
-					<div class="item-time">TV Series (2014–2017)</div>
+					<div class="item-time">Movies (2014–2017)</div>
 				</div>
 			</div>
 			<img class="item-bg" data-swap="https://i.giphy.com/media/l2R00GMs5jUujJtx6/giphy.gif" src="https://popseries.com.br/wp-content/uploads/2017/01/black-sails-.jpg" alt="">
@@ -59,27 +59,123 @@
 			<img class="item-bg" data-swap="https://i.giphy.com/media/dsWfO0joUyniyPdzUx/giphy.gif" src="https://www.kartal24.com/dosyalar/2020/01/westworld-3.jpg" alt="">
 		</div>
 
-		<div class="item">
-			<div class="item-poster">
-				<img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
-			</div>
-			<div class="item-data">
-				<div class="item-part">
-					<div class="item-season">S3</div>
-					<div class="item-episode">E10</div>
-				</div>
-				<h1>The Witcher</h1>
-				<p>Action, Adventure, Fantasy</p>
-				<div class="item-rate">
-					<div class="item-vote">8.3</div>
-					<div class="item-time">TV Series (2019– )</div>
-				</div>
-			</div>
-			<img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
-		</div>
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
+
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
+
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
+
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
+
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
+
+<div class="item">
+    <div class="item-poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGE4MmVjMDgtMzIzYy00NjEwLWJlODMtMDI1MGY2ZDlhMzE2XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Westworld">
+    </div>
+    <div class="item-data">
+        <div class="item-part">
+            <div class="item-season">S3</div>
+            <div class="item-episode">E10</div>
+        </div>
+        <h1>The Witcher</h1>
+        <p>Action, Adventure, Fantasy</p>
+        <div class="item-rate">
+            <div class="item-vote">8.3</div>
+            <div class="item-time">TV Series (2019– )</div>
+        </div>
+    </div>
+    <img class="item-bg" data-swap="https://media1.tenor.com/images/1fbaf34e4636f3e6c024ced99c77d4b7/tenor.gif" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE944YASxuEsbi47hdfy5WMhWMwjuv1cthbA&usqp=CAU" alt="">
+</div>
 
 	</div>
-      </div>
+</div>
+
 <div class="div-filmes">
         
 @forelse($data as $movie)

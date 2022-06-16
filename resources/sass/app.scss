@@ -362,3 +362,311 @@ h1 {
 }
 
 // *************************** MOVIE PAGE (TEMPORAL) ********************** //
+
+// *************************** NEWS PAGE ********************************* //
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body,section#format{height:100%;background-color:rgba(136,136,136,1);}
+html{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 2.5vmin;
+  line-height:1.125;
+  overflow-y:auto;//scroll affects vh calc
+}
+  $blue: rgba(32,16,192,1);
+  $teal: rgba(0,184,226,1);
+  $red: rgba(192,0,0,1);
+  $orange: rgba(228,120,32,1);
+  $mod: calc((((100vh - 2rem) * 0.8) - 2.5em ) / 6 - .125rem  );
+
+section#format{
+  //min-width:56rem;
+  //background-color:rgba(136,136,136,1);
+  padding:1rem 1.5rem;
+  main{
+    overflow:hidden;
+    position:relative;
+    width:calc(80% + 1.5rem);
+    height:calc(80% + 1rem);
+    margin-left:-1.5rem;
+    margin-top:-1rem;
+    background-color:#404040;
+    iframe,video{
+      position:absolute;
+      width:100%;height:auto;
+      top:0;right:0;bottom:0;left:0;
+      background:transparent;
+    }
+    iframe{height:100%;}
+    video.pip{
+      top: 3em;
+      right: 2rem;
+      left: inherit;
+      transform: scale(.25);
+      transform-origin: top right;
+      border: 1rem solid $teal;//2x
+    }
+    figure#live{
+      position:absolute;
+      z-index:1;
+      top:1rem;left:2rem;
+      font-size:1.5em;
+      color:white;
+      .onair{background-color:$teal;font-weight:bold;}
+      *{display:inline-block;float:left;vertical-align:middle;padding:.125em .25em;}
+      time{background-color:black;animation-delay:1s;}
+      cursor:pointer;
+    }
+    header{
+      position:absolute;
+      bottom:1.5rem;
+      right:1.5rem;
+      background:white;
+      padding:0 .5rem;
+      font-size:2em;
+      border-bottom:solid .25rem $teal;
+      margin-left:calc(1.5rem  + (125%/7));
+      
+      &.byline:after{
+        content: 'Lead News Analyst BLOOBERG NEWS';
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        background-color: #fff;
+        width: 33.33%;
+        display: block;
+        border: solid 0.25rem $teal;
+        margin-bottom: .5em;
+        padding: .125em;
+        font-size: .5em;
+      }
+      
+      
+    }
+  }
+  aside{
+    position:relative;
+    width:20%;
+    height: 80%;
+    overflow:hidden;
+    header,figure{
+      position: absolute;
+      width: calc(100% - 1rem);
+    }
+    header{
+      top: 0;
+      z-index:1;
+      padding-left:.5rem;
+      min-height:1.5em;
+    }
+    section{
+      height:initial;
+      width:100%;
+      position:absolute;
+      bottom:0;
+      padding-right:1rem;
+    }
+    article{
+      border-left:.25rem solid $blue;
+      padding:0 .125rem 0 .25rem;
+      margin-top:.125rem;
+      background-color:white;
+      height: $mod;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      a{color:inherit;}
+    }
+    figure{
+      bottom: 0;
+      border-top: .125em solid #b7b7b7;
+      padding: .125em .5em 3em;
+      font-weight: bold;
+      background: white url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.0%22%20viewBox%3D%220%200%20200%20140%22%3E%0A%20%20%3C%21--screen--%3E%0A%20%20%3Cpath%20d%3D%22M13%2011h77v62H13z%22%20fill%3D%22%23000%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M97%2011h79v62H97z%22%20fill%3D%22%23000%22%20%2F%3E%0A%20%20%3C%21--stand--%3E%0A%20%20%3Cpath%20d%3D%22M82%2081h23v39H82z%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M19%20128l2-4%2062-19%204%2015-68%208z%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M166%20128l-1-4-62-19-4%2015%2067%208z%22%20%2F%3E%0A%3C%2Fsvg%3E%0A') no-repeat 100% 100%;
+      background-size: auto 3.5em;
+      display:none;
+    }
+    
+    &.breaking{
+      header{
+      background-color:$red;
+      //todo: stripe shared variable
+      background: repeating-linear-gradient(
+      315deg,
+      darken($red, 2%),
+      darken($red, 2%) .125em,
+      $red .125em,
+      $red .25em
+    );}
+      section,article{height:100%;}
+      article{align-items:initial;text-transform:uppercase;font-weight:bold;color:$red;font-size:1.125em;padding-top:2.66em;border-left-color:transparent;}
+      figure{display:block;}
+      }
+    
+  }
+  footer{
+    clear:both;
+    text-align:center;
+    white-space:nowrap;
+    height:20%;
+    padding-top:.5rem;
+    padding-bottom:1rem;
+    //padding-left:.5rem;
+    section,article{height:100%;}
+    header,figure{overflow:hidden;}
+    article{
+      color:#fff;
+      float:left;
+      width:calc(100% / 7 - .5rem);
+      margin-left:.5rem;
+      time{margin-bottom:.25rem;}
+      time,div{
+        display:block;background:#000;padding:.33rem;}
+      header{margin-bottom:.25rem;}
+      img{width:100%;height:auto;display:block;}
+      figure{
+        position:relative;height:8rem;
+        height:calc(100% - 2.5em);
+        .chart{z-index:1;animation-delay:7.5s;}
+        .chart,.price{
+          position:absolute;top:0;width:100%;height:100%;
+          font-size:1.125em;
+          strong{font-size:1.125em;}
+          div {padding:0;}
+        }
+      .chart > div{
+        > div{
+          width: 100%!important;
+          height: 0!important;
+          padding-bottom: 50%;
+        }
+        width:100%;position:relative;
+        margin-top:.66em;
+        &:before{
+          content:'2-DAY VIEW';
+          font-size: 1em;
+          display:block;
+          position:absolute;
+          bottom:100%;
+          width:100%;
+          color:white!important;
+        }
+        &:after{
+          content:' ';
+          display:block;
+          position:absolute;
+          bottom:0;
+          left:50%;
+          height:100%;
+          border-left:.1em dashed #fff;
+        }
+      }
+      }
+    }
+  }
+  // general elements
+  a{text-decoration:none;}
+  header{
+    font-size: 1.66em;
+    min-height:1.33em;
+    font-weight: bold;
+    color: white;
+    background-color: $blue;
+    background: repeating-linear-gradient(
+      315deg,
+      darken($blue, 2%),
+      darken($blue, 2%) .125em,
+      $blue .125em,
+      $blue .25em
+    );
+  }
+  header,aside article{
+    padding:.125em;
+  }
+  aside,footer{
+    background-color:rgba(183,183,183,1);
+    padding-right:1rem;
+  }
+  
+  
+  // transition, animations
+  .logo{
+    text-transform:initial;
+    animation: glow 15s infinite;
+    }
+  @keyframes glow{
+    90%{text-shadow:-.2em 0em .05em rgba(255,255,255,0);}
+    95%{text-shadow:0em 0em .2em rgba(255,255,255,1);}
+    100%{text-shadow:.2em 0em .05em rgba(255,255,255,0);}
+  }
+
+  footer .chart, main header,main header:after, #live > *{
+    clip-path: inset(0% 100% 0% 0%);
+    animation: wipe 2.5s 1 forwards;
+  }
+  @keyframes wipe{
+    0%{
+      color:transparent;
+      clip-path: inset(0% 100% 0% 0%);
+    }
+    50%{
+      color:transparent;
+      clip-path: inset(0% 0% 0% 0%);
+    }
+    100%{
+      color:inherit;
+      clip-path: none;
+    }
+  }
+
+  aside article{
+    transition: box-shadow 0.5s, height 0.5s, margin-top 0.5s, padding 0.5s;
+    &.del{
+      margin-top:0;
+      padding-top:0;padding-bottom:0;
+      height:0;
+    }
+    &:nth-last-child(n+7){
+      box-shadow:inset 20vw 0 $blue;
+      color:white;
+      a{color:white};
+    }
+  }
+  
+  @for $i from 2 through 7 {
+    footer article:nth-child(#{$i}n) {
+      .chart{
+        animation-delay: #{7.5 + $i * 0.125}s;
+      }
+    }
+}
+  
+  
+  // general styles
+  iframe{background-color:#404040;}
+  header{text-transform:uppercase;}
+  article{text-transform:capitalize;}
+  .teal{color:$teal;}
+  .orange{color:$orange;}
+  .gray{color:#aaaaaa;font-weight:bold;}
+  .hide{display:none;}
+  .left{float:left;}
+  .right{float:right;}
+}
+
+
+@media (orientation: portrait) {
+  body{overflow:hidden;}
+  body section *{visibility:hidden;min-width:inherit;}
+  body:before{
+    content: 'Boomer News is WIDESCREEN format';
+    font-size: 1.66em;
+    font-weight: bold;
+    background: $blue;
+    padding: 1rem 1rem 1.25rem;
+    top: 80%;
+    position: absolute;
+    color: white;
+    animation: glow 15s infinite;
+  }
+}
+

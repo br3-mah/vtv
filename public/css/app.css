@@ -314,6 +314,433 @@ h1 {
   transform: translate(5px, -50%);
   opacity: 1;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, section#format {
+  height: 100%;
+  background-color: rgb(136, 136, 136);
+}
+
+html {
+  font-family: "News Cycle", sans-serif;
+  font-size: 2.5vmin;
+  line-height: 1.125;
+  overflow-y: auto;
+}
+
+section#format {
+  padding: 1rem 1.5rem;
+}
+section#format main {
+  overflow: hidden;
+  position: relative;
+  width: calc(80% + 1.5rem);
+  height: calc(80% + 1rem);
+  margin-left: -1.5rem;
+  margin-top: -1rem;
+  background-color: #404040;
+}
+section#format main iframe, section#format main video {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+section#format main iframe {
+  height: 100%;
+}
+section#format main video.pip {
+  top: 3em;
+  right: 2rem;
+  left: inherit;
+  transform: scale(0.25);
+  transform-origin: top right;
+  border: 1rem solid rgb(0, 184, 226);
+}
+section#format main figure#live {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 2rem;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+section#format main figure#live .onair {
+  background-color: rgb(0, 184, 226);
+  font-weight: bold;
+}
+section#format main figure#live * {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  padding: 0.125em 0.25em;
+}
+section#format main figure#live time {
+  background-color: black;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+section#format main header {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: white;
+  padding: 0 0.5rem;
+  font-size: 2em;
+  border-bottom: solid 0.25rem rgb(0, 184, 226);
+  margin-left: calc(1.5rem + 17.8571428571%);
+}
+section#format main header.byline:after {
+  content: "Lead News Analyst BLOOBERG NEWS";
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background-color: #fff;
+  width: 33.33%;
+  display: block;
+  border: solid 0.25rem rgb(0, 184, 226);
+  margin-bottom: 0.5em;
+  padding: 0.125em;
+  font-size: 0.5em;
+}
+section#format aside {
+  position: relative;
+  width: 20%;
+  height: 80%;
+  overflow: hidden;
+}
+section#format aside header, section#format aside figure {
+  position: absolute;
+  width: calc(100% - 1rem);
+}
+section#format aside header {
+  top: 0;
+  z-index: 1;
+  padding-left: 0.5rem;
+  min-height: 1.5em;
+}
+section#format aside section {
+  height: initial;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-right: 1rem;
+}
+section#format aside article {
+  border-left: 0.25rem solid rgb(32, 16, 192);
+  padding: 0 0.125rem 0 0.25rem;
+  margin-top: 0.125rem;
+  background-color: white;
+  height: calc(((100vh - 2rem) * 0.8 - 2.5em) / 6 - 0.125rem);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+section#format aside article a {
+  color: inherit;
+}
+section#format aside figure {
+  bottom: 0;
+  border-top: 0.125em solid #b7b7b7;
+  padding: 0.125em 0.5em 3em;
+  font-weight: bold;
+  background: white url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.0%22%20viewBox%3D%220%200%20200%20140%22%3E%0A%20%20%3C%21--screen--%3E%0A%20%20%3Cpath%20d%3D%22M13%2011h77v62H13z%22%20fill%3D%22%23000%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M97%2011h79v62H97z%22%20fill%3D%22%23000%22%20%2F%3E%0A%20%20%3C%21--stand--%3E%0A%20%20%3Cpath%20d%3D%22M82%2081h23v39H82z%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M19%20128l2-4%2062-19%204%2015-68%208z%22%20%2F%3E%0A%20%20%3Cpath%20d%3D%22M166%20128l-1-4-62-19-4%2015%2067%208z%22%20%2F%3E%0A%3C%2Fsvg%3E%0A") no-repeat 100% 100%;
+  background-size: auto 3.5em;
+  display: none;
+}
+section#format aside.breaking header {
+  background-color: rgb(192, 0, 0);
+  background: repeating-linear-gradient(315deg, #b60000, #b60000 0.125em, rgb(192, 0, 0) 0.125em, rgb(192, 0, 0) 0.25em);
+}
+section#format aside.breaking section, section#format aside.breaking article {
+  height: 100%;
+}
+section#format aside.breaking article {
+  align-items: initial;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(192, 0, 0);
+  font-size: 1.125em;
+  padding-top: 2.66em;
+  border-left-color: transparent;
+}
+section#format aside.breaking figure {
+  display: block;
+}
+section#format footer {
+  clear: both;
+  text-align: center;
+  white-space: nowrap;
+  height: 20%;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+section#format footer section, section#format footer article {
+  height: 100%;
+}
+section#format footer header, section#format footer figure {
+  overflow: hidden;
+}
+section#format footer article {
+  color: #fff;
+  float: left;
+  width: calc(14.2857142857% - 0.5rem);
+  margin-left: 0.5rem;
+}
+section#format footer article time {
+  margin-bottom: 0.25rem;
+}
+section#format footer article time, section#format footer article div {
+  display: block;
+  background: #000;
+  padding: 0.33rem;
+}
+section#format footer article header {
+  margin-bottom: 0.25rem;
+}
+section#format footer article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+section#format footer article figure {
+  position: relative;
+  height: 8rem;
+  height: calc(100% - 2.5em);
+}
+section#format footer article figure .chart {
+  z-index: 1;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+section#format footer article figure .chart, section#format footer article figure .price {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.125em;
+}
+section#format footer article figure .chart strong, section#format footer article figure .price strong {
+  font-size: 1.125em;
+}
+section#format footer article figure .chart div, section#format footer article figure .price div {
+  padding: 0;
+}
+section#format footer article figure .chart > div {
+  width: 100%;
+  position: relative;
+  margin-top: 0.66em;
+}
+section#format footer article figure .chart > div > div {
+  width: 100% !important;
+  height: 0 !important;
+  padding-bottom: 50%;
+}
+section#format footer article figure .chart > div:before {
+  content: "2-DAY VIEW";
+  font-size: 1em;
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  color: white !important;
+}
+section#format footer article figure .chart > div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  border-left: 0.1em dashed #fff;
+}
+section#format a {
+  text-decoration: none;
+}
+section#format header {
+  font-size: 1.66em;
+  min-height: 1.33em;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(32, 16, 192);
+  background: repeating-linear-gradient(315deg, #1e0fb7, #1e0fb7 0.125em, rgb(32, 16, 192) 0.125em, rgb(32, 16, 192) 0.25em);
+}
+section#format header, section#format aside article {
+  padding: 0.125em;
+}
+section#format aside, section#format footer {
+  background-color: rgb(183, 183, 183);
+  padding-right: 1rem;
+}
+section#format .logo {
+  text-transform: initial;
+  -webkit-animation: glow 15s infinite;
+          animation: glow 15s infinite;
+}
+@-webkit-keyframes glow {
+  90% {
+    text-shadow: -0.2em 0em 0.05em rgba(255, 255, 255, 0);
+  }
+  95% {
+    text-shadow: 0em 0em 0.2em rgb(255, 255, 255);
+  }
+  100% {
+    text-shadow: 0.2em 0em 0.05em rgba(255, 255, 255, 0);
+  }
+}
+@keyframes glow {
+  90% {
+    text-shadow: -0.2em 0em 0.05em rgba(255, 255, 255, 0);
+  }
+  95% {
+    text-shadow: 0em 0em 0.2em rgb(255, 255, 255);
+  }
+  100% {
+    text-shadow: 0.2em 0em 0.05em rgba(255, 255, 255, 0);
+  }
+}
+section#format footer .chart, section#format main header, section#format main header:after, section#format #live > * {
+  -webkit-clip-path: inset(0% 100% 0% 0%);
+          clip-path: inset(0% 100% 0% 0%);
+  -webkit-animation: wipe 2.5s 1 forwards;
+          animation: wipe 2.5s 1 forwards;
+}
+@-webkit-keyframes wipe {
+  0% {
+    color: transparent;
+    -webkit-clip-path: inset(0% 100% 0% 0%);
+            clip-path: inset(0% 100% 0% 0%);
+  }
+  50% {
+    color: transparent;
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    color: inherit;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+@keyframes wipe {
+  0% {
+    color: transparent;
+    -webkit-clip-path: inset(0% 100% 0% 0%);
+            clip-path: inset(0% 100% 0% 0%);
+  }
+  50% {
+    color: transparent;
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    color: inherit;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+section#format aside article {
+  transition: box-shadow 0.5s, height 0.5s, margin-top 0.5s, padding 0.5s;
+}
+section#format aside article.del {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0;
+}
+section#format aside article:nth-last-child(n+7) {
+  box-shadow: inset 20vw 0 rgb(32, 16, 192);
+  color: white;
+}
+section#format aside article:nth-last-child(n+7) a {
+  color: white;
+}
+section#format footer article:nth-child(2n) .chart {
+  -webkit-animation-delay: 7.75s;
+          animation-delay: 7.75s;
+}
+section#format footer article:nth-child(3n) .chart {
+  -webkit-animation-delay: 7.875s;
+          animation-delay: 7.875s;
+}
+section#format footer article:nth-child(4n) .chart {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+section#format footer article:nth-child(5n) .chart {
+  -webkit-animation-delay: 8.125s;
+          animation-delay: 8.125s;
+}
+section#format footer article:nth-child(6n) .chart {
+  -webkit-animation-delay: 8.25s;
+          animation-delay: 8.25s;
+}
+section#format footer article:nth-child(7n) .chart {
+  -webkit-animation-delay: 8.375s;
+          animation-delay: 8.375s;
+}
+section#format iframe {
+  background-color: #404040;
+}
+section#format header {
+  text-transform: uppercase;
+}
+section#format article {
+  text-transform: capitalize;
+}
+section#format .teal {
+  color: rgb(0, 184, 226);
+}
+section#format .orange {
+  color: rgb(228, 120, 32);
+}
+section#format .gray {
+  color: #aaaaaa;
+  font-weight: bold;
+}
+section#format .hide {
+  display: none;
+}
+section#format .left {
+  float: left;
+}
+section#format .right {
+  float: right;
+}
+
+@media (orientation: portrait) {
+  body {
+    overflow: hidden;
+  }
+
+  body section * {
+    visibility: hidden;
+    min-width: inherit;
+  }
+
+  body:before {
+    content: "Boomer News is WIDESCREEN format";
+    font-size: 1.66em;
+    font-weight: bold;
+    background: rgb(32, 16, 192);
+    padding: 1rem 1rem 1.25rem;
+    top: 80%;
+    position: absolute;
+    color: white;
+    -webkit-animation: glow 15s infinite;
+            animation: glow 15s infinite;
+  }
+}
 /*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -1440,6 +1867,9 @@ select {
 .visible {
 	visibility: visible;
 }
+.static {
+	position: static;
+}
 .fixed {
 	position: fixed;
 }
@@ -1450,7 +1880,6 @@ select {
 	position: relative;
 }
 .sticky {
-	position: -webkit-sticky;
 	position: sticky;
 }
 .inset-0 {
@@ -1939,26 +2368,6 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
 }
-.bg-black {
-	--tw-bg-opacity: 1;
-	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-}
-.bg-green-500 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
-}
-.bg-green-400 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
-}
-.bg-green-700 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
-}
-.bg-gray-400 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
-}
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
 }
@@ -2215,10 +2624,6 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(16, 185, 129, var(--tw-text-opacity));
 }
-.text-green-700 {
-	--tw-text-opacity: 1;
-	color: rgba(4, 120, 87, var(--tw-text-opacity));
-}
 .text-gray-200 {
 	--tw-text-opacity: 1;
 	color: rgba(229, 231, 235, var(--tw-text-opacity));
@@ -2226,6 +2631,10 @@ select {
 .text-gray-300 {
 	--tw-text-opacity: 1;
 	color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+.text-green-700 {
+	--tw-text-opacity: 1;
+	color: rgba(4, 120, 87, var(--tw-text-opacity));
 }
 .text-gray-50 {
 	--tw-text-opacity: 1;
