@@ -117,7 +117,7 @@ h1 {
   transform: translate(-50%, 0);
 }
 .card .wrapper {
-  background-color: #fff;
+  background-color: #000;
   min-height: 540px;
   position: relative;
   overflow: hidden;
@@ -1450,6 +1450,7 @@ select {
 	position: relative;
 }
 .sticky {
+	position: -webkit-sticky;
 	position: sticky;
 }
 .inset-0 {
@@ -1482,6 +1483,10 @@ select {
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+.mx-9 {
+	margin-left: 2.25rem;
+	margin-right: 2.25rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -2210,6 +2215,10 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(16, 185, 129, var(--tw-text-opacity));
 }
+.text-green-700 {
+	--tw-text-opacity: 1;
+	color: rgba(4, 120, 87, var(--tw-text-opacity));
+}
 .text-gray-200 {
 	--tw-text-opacity: 1;
 	color: rgba(229, 231, 235, var(--tw-text-opacity));
@@ -2217,10 +2226,6 @@ select {
 .text-gray-300 {
 	--tw-text-opacity: 1;
 	color: rgba(209, 213, 219, var(--tw-text-opacity));
-}
-.text-green-700 {
-	--tw-text-opacity: 1;
-	color: rgba(4, 120, 87, var(--tw-text-opacity));
 }
 .text-gray-50 {
 	--tw-text-opacity: 1;

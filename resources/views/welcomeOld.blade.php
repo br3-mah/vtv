@@ -86,83 +86,248 @@
             .panel.open {
             font-size: 40px;
             flex: 5;
-    }
+            }
+
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 5px;
+}
+body {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.wraper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: #ffffff18;
+  top: 0;
+  width: 100%;
+  height: 4.5rem;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  margin-right: 0.3rem;
+  padding: 0 20px;
+  transition: 0.3s ease;
+}
+header.active1 {
+  background-color: #a1a1a196;
+  height: 3rem;
+}
+header .logo {
+  color: #fff;
+  font-family: "Ubuntu";
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+  margin-left: 1rem;
+  z-index: 99999;
+}
+header .menu {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  transition: 0s;
+}
+header .menu-shadow {
+  display: none;
+}
+header .menu .close-menu {
+  display: none;
+}
+.menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.2rem;
+  padding: 0rem 0.5rem;
+  height: 100%;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 1px;
+}
+header .menu a:hover,
+header .menu a.active {
+  font-weight: 600;
+  color: crimson;
+  transition: color 0.1s ease-in;
+}
+header.active1 .menu a:hover,
+header.active1 .menu a.active {
+  background-color: crimson;
+  color: #fff;
+}
+
+header .show-bar {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+header .show-bar:hover {
+  background-color: #dddddd63;
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.section:nth-child(1) {
+  background-image: url(https://mmirazulmomenmiraz2005.on.drv.tw/image/bg1.jpg);
+}
+.section:nth-child(2) {
+  background-image: url(https://mmirazulmomenmiraz2005.on.drv.tw/image/bg2.jpg);
+}
+.section:nth-child(3) {
+  background-image: url(https://mmirazulmomenmiraz2005.on.drv.tw/image/bg3.jpg);
+}
+.section:nth-child(4) {
+  background-image: url(https://mmirazulmomenmiraz2005.on.drv.tw/image/bg4.jpg);
+}
+.section:nth-child(5) {
+  background-image: url(https://mmirazulmomenmiraz2005.on.drv.tw/image/bg5.jpg);
+}
+
+.section .section-span {
+  font-size: 4.5rem;
+  font-weight: 650;
+  color: #000;
+  opacity: 0;
+  transform: scale(0);
+  text-transform: uppercase;
+}
+.section:nth-child(even) .section-span {
+  transform: translateX(100vw);
+}
+.section:nth-child(odd) .section-span {
+  transform: translateX(-100vw);
+}
+.section.active-sec .section-span {
+  transition: transform 1.5s ease;
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+@media (max-width: 750px) {
+  body header .menu {
+    position: fixed;
+    top: 0;
+    left: -20rem;
+    width: 20rem;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #222;
+    padding: 0;
+    padding-top: 3.5rem;
+    z-index: 99999;
+    overflow-y: auto;
+    transition: left 0.5s linear;
+  }
+  body header .menu-active {
+    left: 0;
+  }
+  header .menu-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000b7;
+    backdrop-filter: blur(50px);
+  }
+  header .shadow-active {
+    display: block;
+  }
+  header .menu a {
+    text-align: center;
+    color: #fff;
+    height: 4rem;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 0;
+    transition: 0s;
+  }
+  header .menu a.active {
+    font-weight: 600;
+    background: crimson;
+    color: #fff;
+  }
+  header .menu a:hover {
+    background-color: crimson;
+    color: #fff;
+    font-weight: 600;
+  }
+  header .show-bar {
+    display: block;
+  }
+  header .hide-bar {
+    display: none;
+  }
+  header .menu .close-menu {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 30px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+}
         </style>
     </head>
     <body class="has-background-black">  
         <div class="">
 
             <!-- Start NavBar -->
-            <nav class="navbar sticky-top is-black" width="100%">
-                <div class="navbar-brand">
-                    <div class="mt-2">
-                        <figure class="image is-64x64">
-                          a  <img src="{{asset('/images/ermac.webp')}}">
-                        </figure>
-                    </div>
-                    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-                </div>
-
-                <div id="navbarExampleTransparentExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item" href="/">
-                            Home
-                        </a>
-                        <a class="navbar-item" href="{{ route('movie.all') }}">
-                            Movies
-                        </a>
-                        <a class="navbar-item" href="{{ route('music.all') }}">
-                            Music
-                        </a>
-                        <a class="navbar-item" href="{{ route('tv.series.all') }}">
-                            TV Shows
-                        </a>
-                        <a class="navbar-item" href="{{ route('sport.all') }}">
-                            Teen TV
-                        </a>
-                        <a class="navbar-item" href="{{ route('sport.all') }}">
-                            Sports
-                        </a>
-                        <a class="navbar-item" href="{{ route('news.all') }}">
-                            News
-                        </a>
-                        <a class="navbar-item text-red-500" href="/live-watch">
-                            Live
-                        </a>
-                    </div>
-
-                    <!-- <div>
-                        <a href="{{ route('search.search') }}" class="button is-small mt-2">
-                            <span class="icon is-small">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </span>
-                        </a>
-                    </div> -->
-
-                    <div class="navbar-end">
-                    <div class="navbar-item">
-                        @if (Route::has('login'))
-                            <div class="hidden top-0 right-0 px-6 py-4 sm:block">
-                                @auth
-                                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                                @else
-                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                    @endif
-                                @endauth
-                            </div>
-                        @endif
-                    </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navbar -->
+  <div class="wraper">
+    <div class="section" id="home">
+      <span class="section-span">Home</span>
+      <header id="header">
+        <a href="#" class="logo">Website</a>
+        <div class="menu">
+          <a href="#home" class="active" onclick="closeMenu()">
             <!-- Introduction Welcome Page Section -->
             <div class="panels">
                 <div class="panel panel1">
@@ -192,6 +357,23 @@
                     <p>Motion</p> -->
                 </div>
             </div>
+          </a>
+          <a href="#aboutme" onclick="closeMenu()">About me</a>
+          <a href="#service" onclick="closeMenu()">Service</a>
+          <a href="#gallery" onclick="closeMenu()">Gallery</a>
+          <a href="#contactus" onclick="closeMenu()">Contact Us</a>
+          <i class="fa fa-times close-menu" onclick="closeMenu()"></i>
+        </div>
+        <div class="menu-shadow" onclick="closeMenu()"></div>
+        <i class="fa fa-bars show-bar" onclick="openMenu()"></i>
+      </header>
+    </div>
+    <div class="section" id="aboutme"><span class="section-span">About me</span></div>
+    <div class="section" id="service"><span class="section-span">Service</span></div>
+    <div class="section" id="gallery"><span class="section-span">Gallery</span></div>
+    <div class="section" id="contactus"><span class="section-span">Contact Us</span></div>
+  </div>
+            <!-- End Navbar -->
             @include('widgets.Front.trending')
             
             @include('widgets.Front.cartoons')
@@ -232,5 +414,51 @@
 
             panels.forEach(panel => panel.addEventListener('click', toggleOpen));
             panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+
+            //NavBar Script
+   var wraper = document.querySelector("body .wraper");
+var a = document.querySelectorAll(".menu a");
+var section = document.querySelectorAll(".section");
+var header = document.getElementById("header");
+var menu = document.querySelector("header .menu");
+var openBar = document.querySelector(".show-bar");
+var menuShadow = document.querySelector(".menu-shadow");
+section[0].classList.add("active-sec");
+wraper.onscroll = function () {
+  if (wraper.scrollTop > 100) {
+    header.classList.add("active1");
+  } else {
+    header.classList.remove("active1");
+  }
+  section.forEach(function (sec) {
+    id = sec.getAttribute("id");
+    if (wraper.scrollTop >= sec.offsetTop - sec.clientHeight / 3) {
+      a.forEach(function (a1) {
+        a1.classList.remove("active");
+        document
+          .querySelector(`#header .menu a[href*=${id}]`)
+          .classList.add("active");
+      });
+      sec.classList.add("active-sec");
+    } else {
+      sec.classList.remove("active-sec");
+    }
+  });
+};
+function openMenu() {
+  menu.classList.add("menu-active");
+  openBar.classList.add("hide-bar");
+  menuShadow.classList.add("shadow-active");
+}
+function closeMenu() {
+  menu.classList.remove("menu-active");
+  openBar.classList.remove("hide-bar");
+  menuShadow.classList.remove("shadow-active");
+}
+window.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+         
 		</script>
 </html>

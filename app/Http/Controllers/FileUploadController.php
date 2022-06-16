@@ -59,7 +59,6 @@ class FileUploadController extends Controller {
     public function store(Request $request)
     { 
 
-
         $request->validate([
             'cover_image' => 'required|mimes:png,jpg,jpeg,csv,txt,pdf|max:2048',
             'caption_title' => 'required',
