@@ -5,9 +5,17 @@ use Livewire\WithFileUploads;
 use Livewire\Component;
 use App\Models\Multimedia; 
 use App\Custom\MovieAPI;
-
+use Illuminate\Http\Request;
+use DB;
 class MediaUploadComponent extends Component
 {
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  Request  $request
+     * @param  int  $id
+     * @return Response
+     */
     use WithFileUploads;
 
     public $isPopped;
@@ -28,7 +36,9 @@ class MediaUploadComponent extends Component
     
     public function render()
     {
-        return view('livewire.media-upload-component');
+        $users = DB::table('sessions')
+                    ->get();
+        return view('livewire.media-upload-component', ['data' => $users]);
     }
 
     public function toggleModal()
