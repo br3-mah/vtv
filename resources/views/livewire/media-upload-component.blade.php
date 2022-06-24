@@ -120,7 +120,7 @@
                                                 <td width="5%">{{$hit->user_id}}</i></td>
                                                 <td>{{ $hit->ip_address}}</td>
                                                 <td>{{ $hit->user_agent}}</td>
-                                                <td>{{ $hit->last_activity}}</td>
+                                                <td>{{ date("Y-m-d H:i:s", $hit->last_activity) }}</td>
                                                 <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
                                             </tr>
                                             @empty
