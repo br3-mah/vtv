@@ -98,8 +98,8 @@
 
 
                 <div class="">
-                    <div class="column is-fullwidth">
-                        <div class="card events-card">
+                    <div class="is-fullwidth">
+                        <div class="">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Events
@@ -119,8 +119,9 @@
                                             <tr>
                                                 <td width="5%">{{$hit->user_id}}</i></td>
                                                 <td>{{ $hit->ip_address}}</td>
-                                                <!-- <td>Lorum ipsum dolem aire</td> -->
-                                                <!-- <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td> -->
+                                                <td>{{ $hit->user_agent}}</td>
+                                                <td>{{ $hit->last_activity}}</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
                                             </tr>
                                             @empty
                                             <tr>
