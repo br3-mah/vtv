@@ -92,8 +92,7 @@ iframe {
 .boxx {
     width: 100%;
     background-color: #000;
-    border: 1px solid #ffffff12;
-    height: 100%;
+    border: 1px solid rgb(10, 17, 9) height: 100%;
     position: relative;
     padding: 1em;
     display: inline-grid;
@@ -218,79 +217,88 @@ iframe {
     opacity: 1;
 }
 
+
 /* ********************* NEWS PAGE *************************** */
-.ticker_wrap{display: flex;}
-.ticker__breaking{
- white-space: nowrap;
- background: red;
-	 color: #fff;
-	 overflow: hidden;
-	 padding: 10px 6px;
-  display: inline-block; 
-  font-weight: bold;
+
+.ticker_wrap {
+    display: flex;
 }
+
+.ticker__breaking {
+    white-space: nowrap;
+    background: red;
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 6px;
+    display: inline-block;
+    font-weight: bold;
+}
+
 .ticker__viewport {
-	 background: #0067E5;
-	 color: #fff;
-	 overflow: hidden;
-	 padding: 10px 0;
-  display: inline-block;
-  flex-grow: 1
+    background: #0067E5;
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 0;
+    display: inline-block;
+    flex-grow: 1
 }
+
 .ticker__viewport a {
-  cursor: context-menu;
-  color: #fff;
-  text-decoration: none;
+    cursor: context-menu;
+    color: #fff;
+    text-decoration: none;
 }
+
 .ticker__viewport a:hover {
-  color: yellow;
-  font-weight: bold;
+    color: yellow;
+    font-weight: bold;
 }
- .ticker__list {
-	 list-style-type: none;
-	 padding: 0;
-	 margin: 0;
-	 display: flex;
+
+.ticker__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
- .ticker__item {
-	 display: inline-block;
-	 white-space: nowrap;
-	 padding-right: 40px;
+
+.ticker__item {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 40px;
 }
-.ticker__item:before{
-  content: "";
-  font-weight: bold;
+
+.ticker__item:before {
+    content: "";
+    font-weight: bold;
 }
 
 .table-01 {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-  }
-  
-  .table-01 th,
-  .table-01 td {
+}
+
+.table-01 th,
+.table-01 td {
     padding: 15px;
     border: 1px solid #ccc;
-  }
-  
-  .table-01 th {
+}
+
+.table-01 th {
     background-color: #f7f7f7;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .table-01 td,
     .table-01 th,
     .table-01 tr {
-      display: block;
-      margin-top: -1px;
+        display: block;
+        margin-top: -1px;
     }
-    
-    .table-01 th{
-      text-align: left;
+    .table-01 th {
+        text-align: left;
     }
-    
     .table-01 td {
-      padding-left: 30px;
+        padding-left: 30px;
     }
-  }
+}

@@ -17,18 +17,18 @@
                     <!-- <x-jet-nav-link class="font-bold text-green-500" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Ermac') }}
                     </x-jet-nav-link> -->
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('tv.series.all') }}" :active="request()->routeIs('tv.series.all')">
+                    {{-- <x-jet-nav-link class=" has-text-white" href="{{ route('tv.series.all') }}" :active="request()->routeIs('tv.series.all')">
                         {{ __('TV Series') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
                     <x-jet-nav-link class=" has-text-white" href="{{ route('movie.all') }}" :active="request()->routeIs('movie.all')">
                         {{ __('Movies') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link class=" has-text-white" href="{{ route('music.all') }}" :active="request()->routeIs('music.all')">
+                    {{-- <x-jet-nav-link class=" has-text-white" href="{{ route('music.all') }}" :active="request()->routeIs('music.all')">
                         {{ __('Music') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link class=" has-text-white" href="{{ route('sport.all') }}" :active="request()->routeIs('sport.all')">
                         {{ __('Sports') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
                     <x-jet-nav-link class=" has-text-white" href="{{ route('news.all') }}" :active="request()->routeIs('news.all')">
                         {{ __('News') }}
                     </x-jet-nav-link>

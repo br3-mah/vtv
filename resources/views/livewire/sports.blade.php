@@ -5,7 +5,7 @@
     </div>
   
     <div class="mx-auto container columns is-multiline"> 
-    @foreach ($data as $key => $media)
+    @forelse ($data as $key => $media)
         <div class="column is-one-quarter-desktop is-half-tablet">
             <div class="container card">
                 <div class="card-image">
@@ -26,19 +26,7 @@
                 </footer>
             </div>
         </div>
-    @endforeach
+    @empty
+    @endforelse
   </div> 
-<!-- 
-  <div class="row">
-        @foreach ($data as $key => $media)
-            <div class="col-lg-4">
-                <img src="{{$media->thumbnail}}" alt="">
-                <span class="title">{{$media->title}}</span>
-                <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
-                <a class="text" href="{{$media->competition->url}}">
-                    {{$media->competition->name}}
-                </a>
-            </div>
-        @endforeach
-    </div> -->
 </div>

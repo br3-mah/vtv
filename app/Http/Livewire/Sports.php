@@ -10,6 +10,7 @@ class Sports extends Component
     public function render()
     {
         $data = SportAPI::getAllSoccer();
+        dd($data);
         return view('livewire.sports', ['data' => $data]);
     }
 }
