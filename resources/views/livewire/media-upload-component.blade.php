@@ -43,7 +43,7 @@
                     </ul>
                 </aside>
             </div>
-            <div class="column is-9">
+            <div class="column is-fullwidth">
                 <nav class="breadcrumb" aria-label="breadcrumbs">
                     <ul>
                         <li><a href="../">Bulma</a></li>
@@ -52,7 +52,8 @@
                         <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                     </ul>
                 </nav>
-                <section class="hero is-info welcome is-small">
+
+                <!-- <section class="hero is-info welcome is-small">
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title">
@@ -63,13 +64,15 @@
                             </h2>
                         </div>
                     </div>
-                </section>
+                </section> -->
+
                 <section class="info-tiles">
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="title">{{App\Models\User::count()}}</p>
                                 <p class="subtitle">Users</p>
+                                <small>{{$data->count()}} hits</small>
                             </article>
                         </div>
                         <div class="tile is-parent">
@@ -92,68 +95,41 @@
                         </div>
                     </div>
                 </section>
-                <div class="columns">
-                    <div class="column is-6">
-                        <div class="card events-card">
+
+
+                <div class="">
+                    <div class="is-fullwidth">
+                        <div class="">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Events
                                 </p>
                                 <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
+                                <span class="icon">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                                </a>
                             </header>
-                            <div class="card-table">
+                            <div class="card-table col-lg-12">
                                 <div class="content">
                                     <table class="table is-fullwidth is-striped">
+                                        
                                         <tbody>
+                                            @forelse($data as $hit)
                                             <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
+                                                <td width="5%">{{$hit->user_id}}</i></td>
+                                                <td>{{ $hit->ip_address}}</td>
+                                                <td>{{ $hit->user_agent}}</td>
+                                                <td>{{ $hit->last_activity}}</td>
                                                 <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
                                             </tr>
+                                            @empty
                                             <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                                <!-- <td width="5%"><i class="fa fa-bell-o"></i></td> -->
+                                                <td>No User Hits</td>
+                                                <!-- <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td> -->
                                             </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                <td>Lorum ipsum dolem aire</td>
-                                                <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                            </tr>
+                                            @endforelse
                                         </tbody>
                                     </table>
                                 </div>
@@ -163,59 +139,9 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="column is-6">
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Inventory Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    User Search
-                                </p>
-                                <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control has-icons-left has-icons-right">
-                                        <input class="input is-large" type="text" placeholder="">
-                                        <span class="icon is-medium is-left">
-                      <i class="fa fa-search"></i>
-                    </span>
-                                        <span class="icon is-medium is-right">
-                      <i class="fa fa-check"></i>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>

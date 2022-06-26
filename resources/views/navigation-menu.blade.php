@@ -81,7 +81,7 @@
                             <x-slot name="content">
                                 <div class="w-60">
                                     <!-- Team Management -->
-                                    <div class="block px-1 py-2 text-xs text-gray-400">
+                                    <div class="block px-1 text-xs text-gray-400">
                                         {{ __('Manage Team') }}
                                     </div>
 
@@ -99,7 +99,7 @@
                                     <div class="border-t border-gray-100"></div>
 
                                     <!-- Team Switcher -->
-                                    <div class="block px-1 py-2 text-xs text-gray-400">
+                                    <div class="block px-1 text-xs text-gray-400">
                                         {{ __('Switch Teams') }}
                                     </div>
 
