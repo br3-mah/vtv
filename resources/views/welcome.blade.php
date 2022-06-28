@@ -90,15 +90,17 @@
         </style>
     </head>
     <body class="has-background-black">  
-        <div class="">
+        <div class="is-fullwidth">
 
             <!-- Start NavBar -->
             <nav class="navbar sticky-top is-black" width="100%">
                 <div class="navbar-brand">
-                    <div class="mt-2">
-                        <figure class="image is-64x64">
-                          a  <img src="{{asset('/images/ermac.webp')}}">
-                        </figure>
+                    <div class="mt-2 ml-4">
+                    <a style="font-family:impact; font-weight:bolder; font-size:30px" class="text-green-500 font-bold" href="{{ route('dashboard') }}">
+                        {{ __('Ermac') }}   
+                        <!-- <img src="https://cdn.dribbble.com/users/719060/screenshots/5713089/dribbble.jpg"> -->
+                        <!-- <x-jet-application-mark class="block h-9 w-auto" /> -->
+                    </a>
                     </div>
                     <div class="navbar-burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -109,24 +111,21 @@
 
                 <div id="navbarExampleTransparentExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" href="/">
-                            Home
-                        </a>
                         <a class="navbar-item" href="{{ route('movie.all') }}">
                             Movies
                         </a>
-                        <a class="navbar-item" href="{{ route('music.all') }}">
+                        {{-- <a class="navbar-item" href="{{ route('music.all') }}">
                             Music
-                        </a>
-                        <a class="navbar-item" href="{{ route('tv.series.all') }}">
+                        </a> --}}
+                        {{-- <a class="navbar-item" href="{{ route('tv.series.all') }}">
                             TV Shows
-                        </a>
-                        <a class="navbar-item" href="{{ route('sport.all') }}">
+                        </a> --}}
+                        {{-- <a class="navbar-item" href="{{ route('sport.all') }}">
                             Teen TV
-                        </a>
-                        <a class="navbar-item" href="{{ route('sport.all') }}">
+                        </a> --}}
+                        {{-- <a class="navbar-item" href="{{ route('sport.all') }}">
                             Sports
-                        </a>
+                        </a> --}}
                         <a class="navbar-item" href="{{ route('news.all') }}">
                             News
                         </a>
@@ -134,14 +133,6 @@
                             Live
                         </a>
                     </div>
-
-                    <!-- <div>
-                        <a href="{{ route('search.search') }}" class="button is-small mt-2">
-                            <span class="icon is-small">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </span>
-                        </a>
-                    </div> -->
 
                     <div class="navbar-end">
                     <div class="navbar-item">
@@ -163,35 +154,7 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-            <!-- Introduction Welcome Page Section -->
-            <div class="panels">
-                <div class="panel panel1">
-                    <!-- <p>Hey</p>
-                    <p>Let's</p>
-                    <p>Go</p> -->
-                </div>
-                <div class="panel panel2">
-                    <!-- <p>Give</p>
-                    <p>Take</p>
-                    <p>Receive</p> -->
-                </div>
-                <div class="panel panel3">
-                    <!-- <p>Experience</p>
-                    <p>It</p>
-                    <p>Today</p> -->
-                </div>
-                <div class="panel panel4">
-                    <!-- <p>Give</p>
-                    <p>All</p>
-                    <p>You Can</p> -->
-                </div>
-                <div class="panel panel5">
-                    <!-- <p>Life</p>
-                    <p>In</p>
-                    
-                    <p>Motion</p> -->
-                </div>
-            </div>
+
             @include('widgets.Front.trending')
             
             @include('widgets.Front.cartoons')

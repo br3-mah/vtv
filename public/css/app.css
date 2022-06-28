@@ -2,7 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @charset "UTF-8";
-html, body {
+html,
+body {
   background-color: #000;
   align-items: center;
   height: 100%;
@@ -42,7 +43,7 @@ html, body {
   -webkit-backdrop-filter: blur(3.6px);
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: arial;
 }
 
 img {
@@ -321,7 +322,9 @@ h1 {
   box-sizing: border-box;
 }
 
-html, body, section#format {
+html,
+body,
+section#format {
   height: 100%;
   background-color: rgb(136, 136, 136);
 }
@@ -345,7 +348,8 @@ section#format main {
   margin-top: -1rem;
   background-color: #404040;
 }
-section#format main iframe, section#format main video {
+section#format main iframe,
+section#format main video {
   position: absolute;
   width: 100%;
   height: auto;
@@ -419,7 +423,8 @@ section#format aside {
   height: 80%;
   overflow: hidden;
 }
-section#format aside header, section#format aside figure {
+section#format aside header,
+section#format aside figure {
   position: absolute;
   width: calc(100% - 1rem);
 }
@@ -462,7 +467,8 @@ section#format aside.breaking header {
   background-color: rgb(192, 0, 0);
   background: repeating-linear-gradient(315deg, #b60000, #b60000 0.125em, rgb(192, 0, 0) 0.125em, rgb(192, 0, 0) 0.25em);
 }
-section#format aside.breaking section, section#format aside.breaking article {
+section#format aside.breaking section,
+section#format aside.breaking article {
   height: 100%;
 }
 section#format aside.breaking article {
@@ -485,10 +491,12 @@ section#format footer {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
-section#format footer section, section#format footer article {
+section#format footer section,
+section#format footer article {
   height: 100%;
 }
-section#format footer header, section#format footer figure {
+section#format footer header,
+section#format footer figure {
   overflow: hidden;
 }
 section#format footer article {
@@ -500,7 +508,8 @@ section#format footer article {
 section#format footer article time {
   margin-bottom: 0.25rem;
 }
-section#format footer article time, section#format footer article div {
+section#format footer article time,
+section#format footer article div {
   display: block;
   background: #000;
   padding: 0.33rem;
@@ -523,17 +532,20 @@ section#format footer article figure .chart {
   -webkit-animation-delay: 7.5s;
           animation-delay: 7.5s;
 }
-section#format footer article figure .chart, section#format footer article figure .price {
+section#format footer article figure .chart,
+section#format footer article figure .price {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   font-size: 1.125em;
 }
-section#format footer article figure .chart strong, section#format footer article figure .price strong {
+section#format footer article figure .chart strong,
+section#format footer article figure .price strong {
   font-size: 1.125em;
 }
-section#format footer article figure .chart div, section#format footer article figure .price div {
+section#format footer article figure .chart div,
+section#format footer article figure .price div {
   padding: 0;
 }
 section#format footer article figure .chart > div {
@@ -575,10 +587,12 @@ section#format header {
   background-color: rgb(32, 16, 192);
   background: repeating-linear-gradient(315deg, #1e0fb7, #1e0fb7 0.125em, rgb(32, 16, 192) 0.125em, rgb(32, 16, 192) 0.25em);
 }
-section#format header, section#format aside article {
+section#format header,
+section#format aside article {
   padding: 0.125em;
 }
-section#format aside, section#format footer {
+section#format aside,
+section#format footer {
   background-color: rgb(183, 183, 183);
   padding-right: 1rem;
 }
@@ -609,7 +623,10 @@ section#format .logo {
     text-shadow: 0.2em 0em 0.05em rgba(255, 255, 255, 0);
   }
 }
-section#format footer .chart, section#format main header, section#format main header:after, section#format #live > * {
+section#format footer .chart,
+section#format main header,
+section#format main header:after,
+section#format #live > * {
   -webkit-clip-path: inset(0% 100% 0% 0%);
           clip-path: inset(0% 100% 0% 0%);
   -webkit-animation: wipe 2.5s 1 forwards;

@@ -474,8 +474,7 @@
     <script src="js/uploader.js"></script>
     <script src="js/news.js"></script>
 		<script>
-
-            bulmaCarousel.attach('#carousel-demo', {
+            bulmaCarousel.attach('#carousel-demos', {
                 slidesToScroll: 1,
                 slidesToShow: 4
             });
