@@ -42,7 +42,7 @@ html, body {
   -webkit-backdrop-filter: blur(3.6px);
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #fff;
-  font-family: Bungee;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -1866,9 +1866,6 @@ select {
 }
 .visible {
 	visibility: visible;
-}
-.static {
-	position: static;
 }
 .fixed {
 	position: fixed;
